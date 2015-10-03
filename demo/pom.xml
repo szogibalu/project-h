@@ -51,7 +51,7 @@
 				<executions>
 					<execution>
 						<id>copy-resources</id>
-						<phase>install</phase>
+						<phase>package</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
@@ -73,8 +73,8 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.3.3</version>
 				<configuration>
-					<imageName>${project.groupId}-${project.artifactId}</imageName>
-					<dockerDirectory>docker</dockerDirectory>
+					<imageName>szogibalu/${project.artifactId}:${project.version}</imageName>
+					<dockerDirectory> ${basedir}/target/docker</dockerDirectory>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
