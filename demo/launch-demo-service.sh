@@ -16,8 +16,8 @@ if (chmod +x target/bin/run-demo.sh) then
 fi
 
 if (./target/bin/run-demo.sh); then
-  echo "Demo App is started.."
+  echo "Demo Service is started.."
 else
-  echo "Error at starting Demo App..."
+  echo "Error at starting Demo Service..."
   exit 1
 fi
