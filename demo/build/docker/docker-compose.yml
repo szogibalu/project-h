@@ -1,0 +1,4 @@
+demo:
+  image: ${docker.image.prefix}/${project.artifactId}:${project.version}
+  ports:
+    - "${service.server.port}:${service.server.port}"

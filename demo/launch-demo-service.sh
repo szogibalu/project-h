@@ -7,10 +7,12 @@ fi
 
 if [ ! -f target/bin/run-demo.sh ]; then
     echo "Run file not found!"
-    exit 1
+    if !(mvn clean install) then
+    	echo "Demo Service has been need to installed."    
+	fi
 fi
 
-if (chmod +x target/bin/run-demo.sh) then
+if !(chmod +x target/bin/run-demo.sh) then
     echo "Cannot set run-demo.sh to executable"
     exit 1
 fi

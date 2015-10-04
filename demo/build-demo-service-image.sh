@@ -11,8 +11,8 @@ if !(which docker > /dev/null;) then
 fi
 
 if (mvn clean package docker:build); then
-  echo "Demo Service is built.."
+  echo "Demo Service is built."
 else
-  echo "Error at building Demo Service..."
+  echo "Error at building Demo Service."
   exit 1
 fi
