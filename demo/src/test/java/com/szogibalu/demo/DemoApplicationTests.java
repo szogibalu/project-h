@@ -1,6 +1,7 @@
 package com.szogibalu.demo;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,14 +21,14 @@ import com.szogibalu.demo.model.Demo;
 @IntegrationTest("server.port=9000")
 public class DemoApplicationTests {
 
-	private RestTemplate restTemplate = new TestRestTemplate();
+    private RestTemplate restTemplate = new TestRestTemplate();
 
-	@Test
-	public void health() {
-		ResponseEntity<Demo> entity = restTemplate.getForEntity("http://localhost:9000/demo", Demo.class);
+    @Test
+    public void demo() {
+	ResponseEntity<Demo> entity = restTemplate.getForEntity("http://localhost:9000/demo", Demo.class);
 
-		assertTrue(entity.getStatusCode().is2xxSuccessful());
-		assertEquals("Up and Running!", entity.getBody().getMessage());		
-	}
-	
+	assertTrue(entity.getStatusCode().is2xxSuccessful());
+	assertEquals("Up and Running!", entity.getBody().getMessage());
+    }
+
 }
