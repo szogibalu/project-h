@@ -8,7 +8,7 @@ fi
 if [ ! -f target/bin/run-demo.sh ]; then
     echo "Run file not found!"
     if !(mvn clean install) then
-    	echo "Demo Service has been need to installed."    
+    	echo "Demo Service has been needed to installed."    
 	fi
 fi
 
