@@ -4,11 +4,11 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
-import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.szogibalu.demo.model.Demo;
 
-@Component
+@RestController
 @Path("/demo")
 public class DemoController {
 

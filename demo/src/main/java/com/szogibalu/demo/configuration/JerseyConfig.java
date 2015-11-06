@@ -8,7 +8,7 @@ import com.szogibalu.demo.controller.DemoController;
 @Configuration
 public class JerseyConfig extends ResourceConfig {
 
-    public JerseyConfig() {
+    JerseyConfig() {
 	register(DemoController.class);
     }
 

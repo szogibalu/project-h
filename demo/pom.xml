@@ -21,11 +21,11 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		
+
 		<service.server.port>9000</service.server.port>
-		
+
 		<docker.image.prefix>szogibalu</docker.image.prefix>
-				
+
 		<docker.maven.plugin.version>0.3.3</docker.maven.plugin.version>
 	</properties>
 
@@ -35,6 +35,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jersey</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -67,7 +73,7 @@
 								<resource>
 									<directory>${basedir}/build</directory>
 									<filtering>true</filtering>
-								</resource>							
+								</resource>
 								<resource>
 									<directory>${basedir}/src/main/resources</directory>
 									<filtering>true</filtering>
@@ -76,8 +82,8 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>			
-			
+			</plugin>
+
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
